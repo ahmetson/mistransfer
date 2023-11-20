@@ -43,10 +43,12 @@ The verification of the transaction is automatic and trustless. The given transa
 The `UserInterface` interface:
 
 ```solidity
-    function recoverMyNft([]byte calldata txHash, address targetContract, address token, uint tokenId) payable external;
-    function recoverMyToken([]byte calldata txHash, address targetContract, address token, uint amount) payable external;
-    removeUrl([]byte calldata url) external;
-    addUrl([]byte calldata url) external;
+interface UserInterface {
+    function recoverMyNft(byte[] calldata txHash, address targetContract, address token, uint tokenId) payable external;
+    function recoverMyToken(byte[] calldata txHash, address targetContract, address token, uint amount) payable external;
+    function removeUrl(byte[] calldata url) external;
+    function addUrl(byte[] calldata url) external;
+}
 ```
 
 > **Todo**
@@ -64,10 +66,6 @@ The `UserInterface` interface:
     // If it's a token, then 0.1 point of tokens are transferred to the owner of contract.
 
 
-   
-   
-    
-
 ### UserCaring
 This smartcontract adds a support to return the locked tokens. 
 It's indended to be called by a `UserInterface`. 
@@ -79,7 +77,7 @@ This smartcontract will have four methods:
 interface UserCaring {
     function recoverUserNft(address nftAddress, address to, uint tokenId) external; // invoked by the 
     function recoverUserToken(address token, address to, uint amount) external;
-    function setCaringSupporter(address newOwner) // change the address that receives the reward.
+    function setCaringSupporter(address newOwner) external; // change the address that receives the reward.
     function caringSupporter() external returns(address);
 }
 ```
