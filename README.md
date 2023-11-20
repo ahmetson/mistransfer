@@ -8,7 +8,7 @@ Simply adding a control to withdraw tokens or nfts is not enough. The owner of t
 
 That's why developers aren't building it, as they have to put a lot of effort in recovery without getting anything in back.
 
-**User Caring** is an trustless, automatic user's asset recovery with zero cost or maintain for the developers. 
+**User Caring** is a trust-less, automatic user's asset recovery with zero cost or maintain for the developers. 
 The only thing for the developers is to extend their smartcontracts from `UserCaring` and pass the recovering contract address:
 
 ```solidity

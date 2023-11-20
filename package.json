@@ -1,0 +1,24 @@
+{
+  "name": "user-caring",
+  "version": "0.0.1",
+  "description": "A framework to recover NFTs and tokens sent to a wrong smartcontract",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmetson/user-caring.git"
+  },
+  "author": "Medet Ahmetson <milayter@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmetson/user-caring/issues"
+  },
+  "homepage": "https://github.com/ahmetson/user-caring#readme",
+  "devDependencies": {
+    "hardhat": "^2.19.1",
+    "ts-node": "^10.9.1",
+    "tsc": "^2.0.4"
+  }
+}
