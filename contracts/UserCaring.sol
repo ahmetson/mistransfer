@@ -65,4 +65,9 @@ contract UserCaring is UserCaringInterface {
         caringSupporter = newOwner;
     }
 
+    // For developer purpose only
+    function setUserInterface(address _userInterface) external {
+        require(msg.sender == caringSupporter, "not_owner");
+        userInterface = msg.sender;
+    }
 }
