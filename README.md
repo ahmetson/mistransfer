@@ -15,7 +15,7 @@ The only thing for the developers is to extend their smartcontracts from `UserCa
 import { UserCaring } from "ahmetson/user-caring/contracts/UserCaring.sol";
 
 contract Sample is UserCaring {
-  constructor(address _recoveryAddress) UserCaring(_recoveryAddress) {}
+  constructor(address _userInterface) UserCaring(_userInterface) {}
 }
 ```
 
@@ -92,7 +92,7 @@ To prevent recovering them the `UserCaring` provides the functions. Simply put t
 
 ```solidity
     contract UserCaring {
-        constructor() RecoverContract(user_caring_address) {}
+        constructor(address userInterface) UserCaring(userInterface) {}
 
         modifier intentionalNftAdd(address nft, address user, uint tokenId) {};
         modifier intentionalNftRemove(address nft, address user, uint tokenId);
