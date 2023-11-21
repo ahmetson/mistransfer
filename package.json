@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ahmetson/user-caring#readme",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.1",
     "dotenv": "^16.3.1",
     "hardhat": "^2.19.1",
     "ts-node": "^10.9.1",
