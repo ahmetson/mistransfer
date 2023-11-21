@@ -2,8 +2,6 @@ import {
   time,
   loadFixture,
 } from "@nomicfoundation/hardhat-toolbox/network-helpers";
-import { anyValue } from "@nomicfoundation/hardhat-chai-matchers/withArgs";
-import { expect } from "chai";
 import { ethers } from "hardhat";
 
 describe("UserInterface", function () {
@@ -21,11 +19,14 @@ describe("UserInterface", function () {
     // For sepolia: 0x66756e2d657468657265756d2d7365706f6c69612d3100000000000000000000
     let chainLinkDonId = "0x66756e2d657468657265756d2d7365706f6c69612d3100000000000000000000";
 
+    // Obtainable from https://chainlist.org/chain/11155111
+    let url = "https://rpc.sepolia.org";
+
     // Contracts are deployed using the first signer/account by default
     const [owner, otherAccount] = await ethers.getSigners();
 
     const UserInterface = await ethers.getContractFactory("UserInterface");
-    const userInterface = await UserInterface.deploy(chainLinkRouter, chainLinkSubId, chainLinkDonId);
+    const userInterface = await UserInterface.deploy(chainLinkRouter, chainLinkSubId, chainLinkDonId, url);
 
     return { userInterface, owner, otherAccount };
   }
@@ -33,13 +34,6 @@ describe("UserInterface", function () {
   describe("Deployment", function () {
     it("Should set the right unlockTime", async function () {
       const { userInterface } = await loadFixture(deployUserInterface);
-
-      let txHash = "0xa2b064f7cf92f29f4c0ac0f2085291467717128830f9b90e870fad787f6ce907";
-      let targetContract = "0x3f4b6664338f23d2397c953f2ab4ce8031663f80";
-      let token = "0x3f4b6664338f23d2397c953f2ab4ce8031663f80";
-      let tokenId = 1;
-
-      await userInterface.printTxHash(txHash, targetContract, token, tokenId);
     });
 
   });
