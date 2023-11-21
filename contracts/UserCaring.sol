@@ -47,7 +47,7 @@ contract UserCaring is UserCaringInterface {
         require(nft.ownerOf(tokenId) == address(this), "not_locked");
         require(!lockedNfts[nftAddress][tokenId], "intentionally_locked_nft");
 
-        nft.transferFrom(msg.sender, to, tokenId);
+        nft.transferFrom(address(this), to, tokenId);
     }
 
     function recoverUserToken(address token, address to, uint amount) external onlyInterfaceOrSupporter {
