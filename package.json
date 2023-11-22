@@ -2,9 +2,10 @@
   "name": "user-caring",
   "version": "0.0.1",
   "description": "A framework to recover NFTs and tokens sent to a wrong smartcontract",
-  "main": "index.js",
+  "main": "src/app.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eth-get-api": "ts-node ./src/app.ts"
   },
   "repository": {
     "type": "git",
