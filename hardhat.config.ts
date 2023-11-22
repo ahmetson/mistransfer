@@ -6,7 +6,9 @@ import "@nomicfoundation/hardhat-toolbox";
 import "@nomicfoundation/hardhat-verify";
 
 
-const INFURA_API_KEY = process.env.HARDHAT_VAR_INFURA_API_KEY as string;
+// const INFURA_API_KEY = process.env.HARDHAT_VAR_INFURA_API_KEY as string;
+const SEPOLIA_RPC = process.env.HARDHAT_VAR_SEPOLIA_RPC as string;
+// const SEPOLIA_RPC = `https://sepolia.infura.io/v3/${INFURA_API_KEY}`;
 const SEPOLIA_PRIVATE_KEY = process.env.HARDHAT_VAR_SEPOLIA_PRIVATE_KEY as string;
 
 const config: HardhatUserConfig = {
@@ -16,7 +18,7 @@ const config: HardhatUserConfig = {
   solidity: "0.8.22",
   networks: {
     sepolia: {
-      url: `https://sepolia.infura.io/v3/${INFURA_API_KEY}`,
+      url: SEPOLIA_RPC,
       accounts: [SEPOLIA_PRIVATE_KEY]
     },
   },
