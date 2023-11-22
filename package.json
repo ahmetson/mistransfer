@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node compiled/app.js",
-    "postinstall": "tsc"
+    "postinstall": "npx tsc -y"
   },
   "repository": {
     "type": "git",
