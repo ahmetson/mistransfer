@@ -97,7 +97,7 @@ app.get(`/transaction-receipt/:txHash`, (req, res) => __awaiter(void 0, void 0, 
     let response = yield fetchPost(url, postData);
     console.log(`GET response`, response);
     let result = parseResponse(response);
-    if (typeof (result) != "string") {
+    if (typeof (result) == "string") {
         return res.status(500).json({ message: result });
     }
     res.json({ result: result });
@@ -107,7 +107,7 @@ app.post('/transaction-receipt/', jsonParser, (req, res) => __awaiter(void 0, vo
     let response = yield fetchPost(url, req.body);
     console.log(`GET response`, response);
     let result = parseResponse(response);
-    if (typeof (result) != "string") {
+    if (typeof (result) == "string") {
         return res.status(500).json({ message: result });
     }
     res.json({ result: result });
