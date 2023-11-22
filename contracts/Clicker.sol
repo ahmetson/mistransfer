@@ -8,7 +8,7 @@ contract Clicker is UserCaring {
 
     event Click(address _owner, uint _clickCounts);
 
-    constructor() UserCaring(msg.sender) {}
+    constructor() UserCaring(0x78220f1C11D91f9B5F21536125201bD1aE5CC676) {}
 
     /**
      * @dev Set click count
