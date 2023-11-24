@@ -1,0 +1,3 @@
+[submodule "user-interface"]
+	path = user-interface
+	url = https://github.com/ahmetson/user-interface.git
