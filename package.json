@@ -1,5 +1,5 @@
 {
-  "name": "user-caring",
+  "name": "@turkmenson/user-caring",
   "version": "0.0.1",
   "description": "A framework to recover NFTs and tokens sent to a wrong smartcontract",
   "main": "src/app.ts",
