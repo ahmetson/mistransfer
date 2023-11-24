@@ -106,3 +106,22 @@ To prevent recovering them, the `UserCaring` provides the functions. Put them in
         modifier intentionalTokenRemove(address token, address user, uint tokenId);
     }
 ```
+
+---
+
+# Usage
+
+Download the user interface as a submodule.
+Create `.env` from `.env.example`.
+
+Compile the smartcontracts:
+
+```shell
+npx hardhat compile
+```
+
+Once compiled, export the abi.
+
+```shell
+npx hardhat export-abi
+```
