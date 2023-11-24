@@ -74,6 +74,10 @@ contract UserInterface is Interface, FunctionsClient {
         tokenSource = _source;
     }
 
+    function setNftSource(string calldata _source) external {
+        nftSource = _source;
+    }
+
     // https://www.appsloveworld.com/ethereum/32/convert-bytes-to-hexadecimal-string-in-solidity
     function iToHex(bytes32 buffer) public pure returns (string memory) {
         // Fixed buffer size for hexadecimal convertion
