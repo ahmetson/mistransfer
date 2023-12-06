@@ -11,7 +11,7 @@ The only thing required from the developers is to extend the smartcontract with 
 
 
 ```solidity
-import { UserCaring } from "@turkmenson/mistransfer/contracts/UserCaring.sol";
+import { UserCaring } from "mistransfer/contracts/UserCaring.sol";
 
 contract Sample is UserCaring {
   constructor(address _userInterface) UserCaring(_userInterface) {}
@@ -88,7 +88,7 @@ The `UserCaring` is intended to be used by the project owners.
 Thus available as the [NPM Package](https://www.npmjs.com/package/@turkmenson/mistransfer).
 
 ```solidity
-import { UserCaring } from "@turkmenson/mistransfer/contracts/UserCaring.sol";
+import { UserCaring } from "mistransfer/contracts/UserCaring.sol";
 
 contract Sample is UserCaring {
   constructor(address _userInterface) UserCaring(_userInterface) {}
