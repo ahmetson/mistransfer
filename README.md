@@ -1,5 +1,12 @@
 # Zero deployment cost recovery of lost crypto
 
+
+📄 Clone or fork `mistransfer`:
+
+```sh
+git clone https://github.com/ahmetson/mistransfer.git
+```
+
 Sometimes, we accidentally send our crypto assets to the wrong address. I, for example, sent the tokens to the token address itself.
 
 While it's impossible to return the assets from the wallet addresses, it is possible to prevent losing funds that are sent to the smartcontracts.

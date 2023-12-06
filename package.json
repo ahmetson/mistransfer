@@ -1,7 +1,7 @@
 {
-  "name": "@turkmenson/user-caring",
-  "version": "0.0.1",
-  "description": "A framework to recover NFTs and tokens sent to a wrong smartcontract",
+  "name": "@turkmenson/mistransfer",
+  "version": "0.0.2",
+  "description": "Recover tokens transferred to a wrong address",
   "main": "src/app.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ahmetson/user-caring.git"
+    "url": "git+https://github.com/ahmetson/mistransfer.git"
   },
   "author": "Medet Ahmetson <milayter@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ahmetson/user-caring/issues"
+    "url": "https://github.com/ahmetson/mistransfer/issues"
   },
-  "homepage": "https://github.com/ahmetson/user-caring#readme",
+  "homepage": "https://github.com/ahmetson/mistransfer#readme",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
     "@nomicfoundation/hardhat-verify": "^2.0.1",
