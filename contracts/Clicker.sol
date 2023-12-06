@@ -3,6 +3,7 @@ pragma solidity >=0.8.2 <0.9.0;
 
 import "./UserCaring.sol";
 
+// Example user caring smartcontract
 contract Clicker is UserCaring {
     uint public clickCounts = 0;
 

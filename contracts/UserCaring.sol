@@ -7,7 +7,7 @@ import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract UserCaring is UserCaringInterface {
     address public userInterface;
-    address public caringSupporter; // owner
+    address public caringSupporter; // project owner that will receive fees
 
     mapping(address => mapping(uint => bool)) public lockedNfts;
     mapping(address => mapping(address => uint)) public lockedTokens;

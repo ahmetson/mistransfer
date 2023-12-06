@@ -5,6 +5,7 @@ import { HardhatUserConfig, vars } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import "@nomicfoundation/hardhat-verify";
 import "hardhat-abi-exporter";
+import "./scripts/set-js-code";
 
 // const INFURA_API_KEY = process.env.HARDHAT_VAR_INFURA_API_KEY as string;
 const SEPOLIA_RPC = process.env.HARDHAT_VAR_SEPOLIA_RPC as string;

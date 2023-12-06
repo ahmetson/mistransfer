@@ -126,7 +126,13 @@ Compile the smartcontracts:
 npx hardhat compile
 ```
 
-Once compiled, export the abi.
+Once compiled, deploy it.
+
+```shell
+npx hardhat run scripts/deploy.ts --network sepolia
+```
+
+Then export the abi.
 
 ```shell
 npx hardhat export-abi
