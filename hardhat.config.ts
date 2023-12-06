@@ -1,5 +1,4 @@
-import dotenv from "dotenv";
-dotenv.config(); // call it before initializing `vars`
+import "dotenv/config";
 
 import { HardhatUserConfig, vars } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
