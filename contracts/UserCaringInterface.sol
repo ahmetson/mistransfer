@@ -6,4 +6,5 @@ interface UserCaringInterface {
     function recoverUserToken(address token, address to, uint amount) external;
     function setCaringSupporter(address newOwner) external; // change the address that receives the reward.
     function caringSupporter() external returns(address);
+    function userInterface() external returns(address);
 }
