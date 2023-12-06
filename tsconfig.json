@@ -9,6 +9,7 @@
     "sourceRoot": "src"
   },
   "include": [
-    "src/"
-  ]
+    "./src/", "./scripts/"
+  ],
+  "files": ["./hardhat.config.ts"]
 }

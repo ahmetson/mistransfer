@@ -116,6 +116,9 @@ Put them in the functions that lock/burn:
 ---
 
 # Usage
+Before starting, we need a Chainlink Functions Subscriptions.
+Go to [New Sub](https://functions.chain.link/sepolia/new).
+Remember the `subId` and paste it in the `scripts/user_interface.ts` script.
 
 Download the user interface as a submodule.
 Create `.env` from `.env.example`.
@@ -126,10 +129,16 @@ Compile the smartcontracts:
 npx hardhat compile
 ```
 
-Once compiled, deploy it.
+Once compiled, deploy the user interface.
 
 ```shell
-npx hardhat run scripts/deploy.ts --network sepolia
+npx hardhat run scripts/user_interface.ts --network sepolia
+```
+
+Verify it on etherscan (optionally).
+
+```shell
+npx hardhat verify --network sepolia <address> <router> <subId> <donId>
 ```
 
 Then export the abi.
@@ -137,3 +146,21 @@ Then export the abi.
 ```shell
 npx hardhat export-abi
 ```
+
+We need to add the User Interface as a consumer:
+
+```shell
+https://functions.chain.link/sepolia/<sub_id>
+```
+
+Finally, we need to set the JS code for the oracles:
+
+```shell
+npx hardhat set-js-source --network sepolia --address <user_interface> --type NFT
+```
+
+```shell
+npx hardhat set-js-source --network sepolia --address <user_interface> --type ERC20
+```
+
+And it's done.

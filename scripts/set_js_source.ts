@@ -1,21 +1,20 @@
-import { ethers } from "hardhat";
-import fs from "fs";
-import path from "path";
+import * as fs from 'fs';
+import * as path from "path";
 import {task} from "hardhat/config";
 
 type SourceType = "NFT" | "ERC20";
 
-task("set-source", "Writes to the smartcontract the Javascript code that verifies transaction").
+task("set-js-source", "Writes to the smartcontract the Javascript code that verifies transaction").
     addParam("address", "UserInterface address").
-    addParam("jsType", "Set NFT recovery or Token recovery script").
+    addParam("type", "Set NFT recovery or Token recovery script").
     setAction(async (taskArgs, hre) => {
     try {
-        const UserInterfaceFactory = await ethers.getContractFactory("UserInterface");
+        const UserInterfaceFactory = await hre.ethers.getContractFactory("UserInterface");
         const userInterface = UserInterfaceFactory.attach(taskArgs.address);
 
-        const jsType: SourceType | undefined = taskArgs.jsType;
+        const jsType: SourceType | undefined = taskArgs.type;
         if (jsType === undefined) {
-            console.error(`jsType must be 'NFT' or 'ERC20'`);
+            console.error(`'type' must be 'NFT' or 'ERC20'`);
             return;
         }
 

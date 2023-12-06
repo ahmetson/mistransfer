@@ -4,7 +4,7 @@ import { HardhatUserConfig, vars } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import "@nomicfoundation/hardhat-verify";
 import "hardhat-abi-exporter";
-import "./scripts/set-js-code";
+import "./scripts/set_js_source";
 
 // const INFURA_API_KEY = process.env.HARDHAT_VAR_INFURA_API_KEY as string;
 const SEPOLIA_RPC = process.env.HARDHAT_VAR_SEPOLIA_RPC as string;
@@ -16,7 +16,7 @@ const config: HardhatUserConfig = {
     apiKey: process.env.HARDHAT_VAR_ETHERSCAN as string,
   },
   abiExporter: {
-    path: "./user-interface/src/utils/abi",
+    path: "./website/src/utils/abi",
     clear: true,
     format: "json",
     flat: true,
